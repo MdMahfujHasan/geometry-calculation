@@ -14,7 +14,7 @@ document.getElementById('btn-calculate-rhombus').addEventListener('click', funct
     li.innerHTML = `
             <div class="flex mb-6">
                 <p>Rhombus</p>
-                <p class="mx-8">${rhombusArea}cm<sup>2</sup></p>
+                <p class="mx-4">${rhombusArea}cm<sup>2</sup></p>
                 <button class="text-white bg-cyan-600 hover:bg-cyan-700 px-2.5 py-2 rounded">Convert to m<sup>2</sup>
                 </button>
             </div>

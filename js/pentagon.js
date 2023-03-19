@@ -14,7 +14,7 @@ document.getElementById('btn-calculate-pentagon').addEventListener('click', func
     li.innerHTML = `
             <div class="flex mb-6">
                 <p>Pentagon</p>
-                <p class="mx-8">${pentagonArea}cm<sup>2</sup></p>
+                <p class="mx-4">${pentagonArea}cm<sup>2</sup></p>
                 <button class="text-white bg-cyan-600 hover:bg-cyan-700 px-2.5 py-2 rounded">Convert to m<sup>2</sup>
                 </button>
             </div>

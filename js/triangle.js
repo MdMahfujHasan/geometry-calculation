@@ -15,10 +15,10 @@ document.getElementById('btn-calculate-triangle').addEventListener('click', func
             <div class="flex mb-6">
                 <p>Triangle</p>
                 <p class="mx-4">
-                    <span id="triangle-area">${triangleArea}</span>
+                    <span>${triangleArea}</span>
                     cm<sup>2</sup>
                 </p>
-                <button id="triangle-convert-m" class="text-white bg-cyan-600 hover:bg-cyan-700 px-2.5 py-2 rounded">Convert to m<sup>2</sup>
+                <button onclick="handleOnClickTriangle()" class="text-white bg-cyan-600 hover:bg-cyan-700 px-2.5 py-2 rounded">Convert to m<sup>2</sup>
                 </button>
             </div>
 `;
@@ -26,10 +26,3 @@ document.getElementById('btn-calculate-triangle').addEventListener('click', func
     ol.appendChild(li);
 })
 
-document.getElementById('triangle-convert-m').addEventListener('click', function () {
-    const cm = document.getElementById('triangle-area');
-    const cmString = cm.innerText;
-    const cmNumeric = parseFloat(cmString);
-    const m = cmNumeric * 0.01;
-    cm.innerText = m;
-})
