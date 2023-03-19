@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6c0e978889.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="container mx-auto bg-slate-200 mb-8 p-4">
+    <h1 onclick="window.location.href = 'index.html'"
+        class="text-xl mt-2 text-blue-600 decoration-blue-300 cursor-pointer">
+        <i class="fa-solid fa-house"></i> <span class="underline underline-offset-2 decoration-2">Main Page</span>
+    </h1>
+    <h1
+        class="text-6xl text-center mt-4 mb-8 underline underline-offset-4 decoration-4 text-blue-600 decoration-blue-300">
+        Blogs</h1>
+    <h2 class="text-3xl font-semibold text-blue-800">What is DOM and what is the purpose of DOM?</h2>
+    <br>
+    <p class="text-slate-700 font-medium">DOM stands for Document Object Model, and it is a programming interface for
+        HTML and XML
+        documents. It
+        represents
+        the web page as a structured hierarchy of objects, allowing developers to interact with the page dynamically and
+        manipulate its content, structure, and style.
+        <br>
+        <br>
+        The purpose of DOM is to provide a standardized way for developers to access, navigate, and modify the content
+        of web pages. By providing a tree-like structure of objects representing elements, attributes, and text nodes in
+        a document, the DOM enables developers to write scripts that can change the content and appearance of a web page
+        in response to user actions or other events.
+        <br>
+        <br>
+        The DOM also enables developers to create and remove elements dynamically, add or remove classes and styles, and
+        manipulate attributes such as the value of form fields or the source of an image. This makes it possible to
+        create interactive web applications that can respond to user input and update the content of a page.
+    </p>
+    <br>
+    <h2 class="text-3xl font-semibold text-blue-800">How will you select HTML elements using DOM? Name the DOM methods.
+    </h2>
+    <br>
+    <p class="text-slate-700 font-medium">To select HTML elements using the DOM, you can use the following methods:
+        <br><br>
+    <ol class="text-slate-700 font-medium">
+        <li>
+            document.getElementById(): This method selects an element based on its ID attribute.
+            <br>
+            For example: var element = document.getElementById('myId');
+        </li>
+        <li>
+            document.getElementsByClassName(): This method selects elements based on their class name.
+            <br>
+            For example: var elements = document.getElementsByClassName('myClass');
+        </li>
+        <li>
+            document.getElementsByTagName(): This method selects elements based on their tag name.
+            <br>
+            For example: var elements = document.getElementsByTagName('div');
+        </li>
+        <li>
+            document.querySelector(): This method selects the first element that matches a specified CSS selector.
+            <br>
+            For example: var element = document.querySelector('#myId .myClass');
+        </li>
+        <li>
+            document.querySelectorAll(): This method selects all elements that match a specified CSS selector.
+            <br>
+            For example: var elements = document.querySelectorAll('div.myClass');
+        </li>
+    </ol>
+    <br>
+    <span class="text-slate-700 font-medium">Once you have selected an element, you can then use various properties and
+        methods provided by the DOM to
+        manipulate it. For example, you can set the element's text content with the textContent property, or modify its
+        CSS styles using the style property.</span></p>
+    <br>
+    <span class="text-slate-700 font-medium"></span>
+    <ol class="text-slate-700 font-medium">
+        <li>getElementById(): Selects an element based on its ID attribute.</li>
+        <li>getElementsByClassName(): Selects elements based on their class name.</li>
+        <li>getElementsByTagName(): Selects elements based on their tag name.</li>
+        <li>querySelector(): Selects the first element that matches a specified CSS selector.</li>
+        <li>querySelectorAll(): Selects all elements that match a specified CSS selector.</li>
+        <li>createElement(): Creates a new HTML element.</li>
+        <li>appendChild(): Appends a child element to a parent element.</li>
+        <li>removeChild(): Removes a child element from a parent element.</li>
+        <li>setAttribute(): Sets the value of an attribute on an element.</li>
+        <li>getAttribute(): Gets the value of an attribute on an element.</li>
+        <li>addEventListener(): Attaches an event listener to an element.</li>
+        <li>removeEventListener(): Removes an event listener from an element.</li>
+        <li>innerHTML: Gets or sets the HTML content of an element.</li>
+        <li>innerText or textContent: Gets or sets the text content of an element.</li>
+        <li>style: Gets or sets the CSS styles of an element.</li>
+        <li>classList: Gets or sets the CSS classes of an element.</li>
+    </ol>
+    <br>
+    <h2 class="text-3xl font-semibold text-blue-800">What is event bubble?</h2>
+    <br>
+    <p class="text-slate-700 font-medium">Event bubbling is a phenomenon in the Document Object Model (DOM) where an
+        event that
+        occurs on an element inside
+        another element is also triggered on the parent elements of the inner element, propagating up the DOM tree. This
+        means that when an event occurs on a nested element, such as a button inside a div, the event will also trigger
+        on the parent element of the button (in this case, the div).
+        <br>
+        <br>
+        This bubbling up of events can be both useful and problematic. It can be useful because it allows you to capture
+        an event on a parent element and handle it for all of its child elements without having to attach event
+        listeners to each child element individually. However, it can also be problematic because it can cause
+        unintended side effects or conflicts with other event handlers.
+        <br>
+        <br>
+        To prevent event bubbling, you can use the event.stopPropagation() method in your event handler function. This
+        method stops the propagation of the event to the parent elements, allowing you to handle the event exclusively
+        on the target element.
+    </p>
+    <br>
+    <h2 class="text-3xl font-semibold  text-blue-800">What is a callback function and why should you use it?</h2>
+    <br>
+    <p class="text-slate-700 font-medium">A callback function is a function that is passed as an argument to another
+        function and is
+        called within that
+        function. The purpose of using a callback function is to allow the called function to execute some code or
+        perform some action on the data that is passed to it. The callback function is called once the data has been
+        processed, and its result can then be used by the calling function.
+        <br>
+        <br>
+        The advantages of using a callback function include:
+    <ol class="text-slate-700 font-medium">
+        <li>Modularity: Callback functions allow for modular programming by separating concerns and keeping the code
+            more
+            organized and easier to understand.
+        </li>
+        <li>
+            Asynchronous Operations: Callback functions are often used in asynchronous programming, where a function
+            needs
+            to wait for some external process to complete before it can continue. The callback function is called once
+            the
+            external process is complete, allowing the main function to continue execution.
+        </li>
+        <li>Reusability: Callback functions can be reused in different contexts, making the code more versatile and
+            easier
+            to maintain.
+        </li>
+        <li>
+            Event Handling: Callback functions are often used to handle events in web development, such as button
+            clicks,
+            mouse movements, and keyboard inputs. The callback function is triggered when the event occurs, allowing the
+            code to respond to user input.
+        </li>
+        <li>
+            Overall, callback functions are a powerful tool in modern programming, and their use can greatly improve
+            code
+            efficiency, modularity, and organization.
+        </li>
+    </ol>
+    </p>
+</body>
+
+</html>
